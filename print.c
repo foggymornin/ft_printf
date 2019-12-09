@@ -3,18 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   print.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mafajat <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: mafajat <mafajat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/20 15:00:25 by mafajat           #+#    #+#             */
-/*   Updated: 2019/11/20 15:28:14 by mafajat          ###   ########.fr       */
+/*   Updated: 2019/12/09 21:51:11 by mafajat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
-
+#include <stdio.h>
 int 	main()
 {
 	char ss[] = "hell%so";
 	char pp[] = "xxx";
-	printf(pp, "%d");
+	printf("%10.10d", 10);
 }

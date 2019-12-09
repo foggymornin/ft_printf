@@ -1,27 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_pstring.c                                       :+:      :+:    :+:   */
+/*   ft_printf_utils_2.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mafajat <mafajat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/22 16:06:36 by mafajat           #+#    #+#             */
-/*   Updated: 2019/12/09 21:36:37 by mafajat          ###   ########.fr       */
+/*   Created: 2019/12/09 20:55:36 by mafajat           #+#    #+#             */
+/*   Updated: 2019/12/09 21:00:05 by mafajat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int     ft_pstring(char *str)
+void    ft_reinitialize(void)
 {
-    int n;
-
-    if (f.p < 0 || f.p >= ft_strlen(str))
-        n = f.width - ft_strlen(str);
-    else
-        n  = f.width - f.p;
-    while (n-- > 0)
-        ft_putchar(' ');
-    ft_putstr(str, f.p);
-  	 return (0);
+    f.width = -1;
+    f.p = -1;
+    f.r = '0';
 }

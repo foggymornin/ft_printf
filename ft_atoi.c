@@ -1,27 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_pstring.c                                       :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mafajat <mafajat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/22 16:06:36 by mafajat           #+#    #+#             */
-/*   Updated: 2019/12/09 21:36:37 by mafajat          ###   ########.fr       */
+/*   Created: 2019/10/15 13:53:35 by mafajat           #+#    #+#             */
+/*   Updated: 2019/12/08 20:08:05 by mafajat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int     ft_pstring(char *str)
+int		ft_atoi(const char *str)
 {
-    int n;
+	int nb;
+	int n;
+	int s;
 
-    if (f.p < 0 || f.p >= ft_strlen(str))
-        n = f.width - ft_strlen(str);
-    else
-        n  = f.width - f.p;
-    while (n-- > 0)
-        ft_putchar(' ');
-    ft_putstr(str, f.p);
-  	 return (0);
+	s = 1;
+	n = 0;
+	nb = 0;
+	while ((*str >= 9 && *str <= 13) || *str == ' ')
+		str++;
+	if (*str == '-')
+		s = -1;
+	if (*str == '+' || *str == '-')
+		str++;
+	while (*str >= '0' && *str <= '9')
+	{
+		if (s > 0 && nb < 0)
+			return (-1);
+		if (s < 0 && nb < 0)
+			return (0);
+		n = *str - '0';
+		nb = 10 * nb + n;
+		str++;
+	}
+	return (nb * s);
 }
