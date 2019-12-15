@@ -17,19 +17,13 @@ void	ft_putchar(char c)
 	write(1, &c, 1);
 }
 
-void	ft_putstr(char *str, int p)
+void	ft_putstr(char *str)
 {
-	while (*str && p--)
+	while (*str && (f.p-- || f.type == 'i')) 
 	{
 		ft_putchar(*str);
 		str++;
 	}
-}
-char	ft_checkf(const char *s)
-{
-	if (*s == 's' || *s == 'd' || *s == 'c' || *s == 'p')
-		return (*s);
-	return ('1');
 }
 int		ft_skip_flags(const char *s, int i)
 {
@@ -54,9 +48,13 @@ void	ft_conv(va_list ar, const char *s)
 void	storeflags(va_list ar, const char *s)
 {
 	s++;
+	if (*s == '0')
+	{
+		f.z = '0';
+		s++;
+	}
 	if (*s >= '0' && *s <= '9')
 		f.width = ft_atoi(s);
-	//printf("%d", f.width);
 	 else if (*s == '*')
 		f.width = va_arg(ar, int);
 	while ((*s >= '0' && *s <= '9') || *s == '*')

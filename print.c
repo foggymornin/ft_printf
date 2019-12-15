@@ -6,7 +6,7 @@
 /*   By: mafajat <mafajat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/20 15:00:25 by mafajat           #+#    #+#             */
-/*   Updated: 2019/12/09 21:51:11 by mafajat          ###   ########.fr       */
+/*   Updated: 2019/12/15 20:47:18 by mafajat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,5 +15,8 @@ int 	main()
 {
 	char ss[] = "hell%so";
 	char pp[] = "xxx";
-	printf("%10.10d", 10);
+	unsigned int i;
+	i = -1;
+	//printf("%03.6d", "ss", 88);
+	printf("%*.*d",4,3, 5);
 }
