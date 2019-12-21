@@ -6,15 +6,15 @@
 /*   By: mafajat <mafajat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/13 12:39:39 by mafajat           #+#    #+#             */
-/*   Updated: 2019/12/08 20:06:44 by mafajat          ###   ########.fr       */
+/*   Updated: 2019/12/19 21:23:28 by mafajat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-size_t		ft_strlen(const char *s)
+int		ft_strlen(const char *s)
 {
-	size_t n;
+	int n;
 
 	n = 0;
 	while (s[n])

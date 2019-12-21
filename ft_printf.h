@@ -6,7 +6,7 @@
 /*   By: mafajat <mafajat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/20 14:16:03 by mafajat           #+#    #+#             */
-/*   Updated: 2019/12/13 17:22:11 by mafajat          ###   ########.fr       */
+/*   Updated: 2019/12/19 21:28:59 by mafajat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,12 @@ typedef struct s_flags
     char z;
     char r;
     char type;
+    char minus;
 }               t_flags;
 
 t_flags f;
-size_t		ft_strlen(const char *s);
+int		ft_printf(const char *s, ...);
+int		ft_strlen(const char *s);
 int		ft_atoi(const char *str);
 int     ft_pstring(char *str);
 void	ft_putchar(char c);

@@ -48,6 +48,11 @@ void	ft_conv(va_list ar, const char *s)
 void	storeflags(va_list ar, const char *s)
 {
 	s++;
+	if (*s == '-')
+	{
+		f.minus = '-';
+		s++;
+	}
 	if (*s == '0')
 	{
 		f.z = '0';

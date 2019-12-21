@@ -6,7 +6,7 @@
 /*   By: mafajat <mafajat@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/20 14:49:26 by mafajat           #+#    #+#             */
-/*   Updated: 2019/12/15 20:47:29 by mafajat          ###   ########.fr       */
+/*   Updated: 2019/12/21 20:35:48 by mafajat          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,10 +31,12 @@ int		ft_printf(const char *s, ...)
 	}
 	return (0);
 }
-int		main()
+int main()
 {
-	char s[] = "MAROUANE";
-	ft_printf("%0*.*d",4,3, 5);
-	//printf("\n");
-	//printf("first string : %k", s);
+	char s[] = "hello";
+		ft_printf("%0.10s | \n", s);
+		printf("%.10s | \n", s);
+
+	//ft_printf("%0.10d|\n", 555);
+	//printf("%06.5d|\n", 555);
 }
